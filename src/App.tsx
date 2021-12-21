@@ -13,7 +13,7 @@ function bar() {
 function App() {
   return (
     <div className="App">
-    <h1>{bar()}</h1>
+    <h1>{foo() + " " + bar()}</h1>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

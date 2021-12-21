@@ -13,3 +13,20 @@ it('uses a custom command written in TypeScript', () => {
 
   cy.clickButtonWithText('Button!');
 })
+
+it('uses a custom command written in TypeScript checkbox', () => {
+  const Comp2: React.FC = () => {
+    const onSelect = cy.stub()
+    const jsxElements = <>
+      <input type="checkbox" id="chkOption" name="chkOption" onSelect={onSelect} />
+      <label htmlFor="chkOption">Click Me!</label>
+    </>
+    return (
+      jsxElements
+    );
+  }
+
+  mount(<Comp2 />);
+  
+  cy.get("input").check();
+})
