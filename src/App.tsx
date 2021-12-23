@@ -1,33 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Card from './components/Card';
+import Weather from './components/Weather';
 
-function foo() {
-  return 'foo'
-}
 
-function bar() {
-  return 'bar'
-}
 
 function App() {
   return (
     <div className="App">
-    <h1>{foo() + " " + bar()}</h1>
+    <h1>Today</h1>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+          Information about Today 
       </header>
+      <Card>
+        <Weather city='n/a' description='n/a' temperature={0} />
+      </Card>
+     
     </div>
   );
 }

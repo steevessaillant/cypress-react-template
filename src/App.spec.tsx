@@ -2,9 +2,14 @@ import React from 'react';
 import { mount } from '@cypress/react';
 import App from './App';
 
-it('renders learn react link', () => {
+it('renders information about today', () => {
   mount(<App />);
-  cy.get('a').contains('Learn React');
+  cy.get('header').contains('Information about Today');
+});
+
+it('renders Weather about today', () => {
+  mount(<App />);
+  cy.contains('Forecast for Today');
 });
 
 
