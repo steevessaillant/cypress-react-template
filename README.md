@@ -1,3 +1,5 @@
+Uses cypress and Jest.
+
 As of Cypress 7.0, the new Component Testing runner is now bundled with the Cypress! It takes inspiration and builds on the learnings from the original Component Testing implementation, which was hidden behind the `experimentalComponentTesting` flag.
 
 In this blog post we will see how to set up Cypress Component Testing in a new React app created via Create React App using TypeScript.
